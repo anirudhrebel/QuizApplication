@@ -98,3 +98,59 @@ The following are the main tables used in the application:
 ```bash
 - git clone https://github.com/your-username/quiz-app.git
 
+Configure Database
+Open MySQL and create the database:
+
+sql
+Copy
+Edit
+CREATE DATABASE quiz_db;
+Import the table schema or create tables based on the schema section above.
+
+Update the application.properties:
+
+properties
+Copy
+Edit
+spring.datasource.url=jdbc:mysql://localhost:3306/quiz_db
+spring.datasource.username=your_db_username
+spring.datasource.password=your_db_password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+⚙️ Run the Application
+bash
+Copy
+Edit
+mvn clean install
+mvn spring-boot:run
+Access the app at: http://localhost:8080
+
+🧪 How to Use
+Register or log in as a user.
+
+Choose any available quiz and start answering.
+
+View real-time feedback for each answer.
+
+Check your final score and review past attempts.
+
+If admin, manage quizzes via the admin interface.
+
+🚀 Future Enhancements
+Timer-based quizzes
+
+Randomized question sets
+
+Question difficulty levels
+
+Email notifications
+
+UI redesign with JavaFX or modern styling
+
+
+
+🙌 Author
+Anirudh Gaddey
+Java Backend Developer | Spring Boot | MySQL | JDBC | GitHub: @anirudhrebel
+
